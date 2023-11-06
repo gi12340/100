@@ -1,14 +1,14 @@
-var SpeechRecognition = window.webkitSpeechRecogntion;
-var recogntion = new SpeechRecognition();
+var SpeechRecognition = window.webkitSpeechRecognition; 
+var recognition = new SpeechRecognition();
 var textbox = document.getElementById("textbox");
 
 function start() 
 {
     textbox.innerHTML= ""
-    recogntion.start()
+    recognition.start()
 
 }
-recogntion.onresult = function(event){
+recognition.onresult = function(event){
     console.log(event)
     var content = event.results[0][0].transcript
     textbox.innerHTML= content
